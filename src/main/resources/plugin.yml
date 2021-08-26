@@ -5,3 +5,9 @@ api-version: 1.16
 authors: [ eight_y_88 ]
 description: Minecraft Werewolf Japanese Lightを移植したもの
 website: https://pa-union.f5.si/
+
+commands:
+  mwj:
+    usage: /<command> [subcommand]
+    permission: op
+    permission-message: You don't have permission
