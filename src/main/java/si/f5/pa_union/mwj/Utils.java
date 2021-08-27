@@ -18,6 +18,12 @@ public class Utils {
         Arrays.stream(strings).forEach(Bukkit::broadcastMessage);
     }
 
+    public static void broadcastMessages(String title, String... messages) {
+        broadcast(MWJCore.getInstance().getMessage(title));
+        broadcast(messages);
+        broadcast("----------------------------------");
+    }
+
     public static String getVersion() {
         return Bukkit.getVersion().split("\\(MC:", 2)[1].split("\\)", 2)[0];
     }

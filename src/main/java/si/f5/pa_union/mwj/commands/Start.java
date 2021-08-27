@@ -11,8 +11,7 @@ public class Start {
         if (MWJCore.getInstance().getCurrentGame() != null) {
             MWJCore.getInstance().setCurrentGame(new Game());
         } else {
-            Utils.broadcast(MWJCore.getInstance().getMessage(ChatColor.YELLOW.toString() + ChatColor.BOLD + "Error"));
-            Utils.broadcast(
+            Utils.broadcastMessages(ChatColor.YELLOW.toString() + ChatColor.BOLD + "Error",
                     "  ゲーム中に、新たなゲームは開始できません。",
                     "  以下のコマンドで、ゲームを中断してください。",
                     ChatColor.LIGHT_PURPLE + "    /mwj stop"

@@ -22,7 +22,7 @@ public final class MWJCore extends JavaPlugin {
             ChatColor.RED.toString() + ChatColor.BOLD + "Minecraft Werewolf Light",
             ChatColor.GREEN.toString() + ChatColor.BOLD + "  - Minecraft version " + Utils.getVersion(),
             " %MESSAGE%",
-            "----------------------------------"
+
     };
 
     @Override
