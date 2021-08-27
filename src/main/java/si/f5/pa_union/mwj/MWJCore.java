@@ -1,6 +1,7 @@
 package si.f5.pa_union.mwj;
 
 import com.sun.istack.internal.Nullable;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -22,12 +23,13 @@ public final class MWJCore extends JavaPlugin {
             ChatColor.RED.toString() + ChatColor.BOLD + "Minecraft Werewolf Light",
             ChatColor.GREEN.toString() + ChatColor.BOLD + "  - Minecraft version " + Utils.getVersion(),
             " %MESSAGE%",
-
+            "----------------------------------"
     };
 
     @Override
     public void onEnable() {
         instance = this;
+        Bukkit.getPluginManager().registerEvents(new EventListener(), this);
 
         Utils.broadcast(
                 "----------------------------------",
@@ -38,7 +40,8 @@ public final class MWJCore extends JavaPlugin {
                 "  当ゲームの必要人数は" + ChatColor.RED + ChatColor.BOLD + " 3 " + ChatColor.RESET + "人からです。",
                 "  以下のコマンドで、ゲームを開始してください。",
                 "      " + ChatColor.LIGHT_PURPLE + "/mwj start",
-                "----------------------------------");
+                "----------------------------------"
+        );
     }
 
     @Override

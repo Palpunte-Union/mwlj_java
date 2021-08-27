@@ -9,7 +9,7 @@ import si.f5.pa_union.mwj.instances.Game;
 public class Start {
     public static boolean execute(Player host) {
         if (MWJCore.getInstance().getCurrentGame() != null) {
-            MWJCore.getInstance().setCurrentGame(new Game());
+            MWJCore.getInstance().setCurrentGame(new Game(host));
         } else {
             Utils.broadcastMessages(ChatColor.YELLOW.toString() + ChatColor.BOLD + "Error",
                     "  ゲーム中に、新たなゲームは開始できません。",
