@@ -46,6 +46,7 @@ public final class MWJCore extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        current.stop();
     }
 
     public static MWJCore getInstance() {

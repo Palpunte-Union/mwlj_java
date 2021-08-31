@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class MWLPlayer {
     private RoleType role = RoleType.NONE;
-    private UUID uuid;
+    private final UUID uuid;
 
     public MWLPlayer(Player player) {
         uuid = player.getUniqueId();

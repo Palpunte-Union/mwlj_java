@@ -9,7 +9,8 @@ import java.util.UUID;
 
 public class Game {
     private final Player host;
-    private Phases phase = Phases.SETTING;
+    private Thread thread;
+    private Phase phase = Phase.SETTING;
     private HashMap<UUID, MWLPlayer> playerMap;
 
     public Game(Player host) {
@@ -18,14 +19,18 @@ public class Game {
     }
 
     private void start() {
+        thread = new Thread(() -> {
 
+        }, "MWL");
+        thread.start();
     }
 
     public void stop() {
+        thread = null;
         MWJCore.getInstance().setCurrentGame(null);
     }
 
-    public Phases getPhase() {
+    public Phase getPhase() {
         return phase;
     }
 
