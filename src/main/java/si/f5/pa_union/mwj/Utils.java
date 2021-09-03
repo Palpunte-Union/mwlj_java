@@ -8,10 +8,7 @@ import java.util.logging.Logger;
 public class Utils {
     public static void log(String... strings) {
         Logger logger = MWJCore.getInstance().getLogger();
-
-        for (String str : strings) {
-            logger.info(str);
-        }
+        Arrays.stream(strings).forEach(logger::info);
     }
 
     public static void broadcast(String... strings) {
