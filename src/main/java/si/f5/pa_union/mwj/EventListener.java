@@ -16,6 +16,7 @@ public class EventListener implements Listener {
             Method[] methods = clazz.getDeclaredMethods();
             Arrays.stream(methods)
                     .filter(i -> i.getParameters()[0].getClass().getName().equals(e.getClass().getName()))
+                    .filter(i -> Arrays.stream(i.getDeclaredAnnotations()).filter(a -> a.getClass().getName().equals(si.f5.pa_union.mwj.instances.events.Event.class.getName())).toArray().length != 0)
                     .forEach(i -> {
                         try {
                             i.invoke(MWJCore.getInstance().getCurrentGame().getEventListener(), e);
